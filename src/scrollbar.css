@@ -1,0 +1,62 @@
+/* 外层容器 */
+.scrollbar {
+    position: relative;
+    overflow: hidden;
+}
+
+/* 隐藏 */
+.scrollbar[scroll-hide] .scrollbar-vertical-rail,
+.scrollbar[scroll-hide] .scrollbar-vertical-bar,
+.scrollbar[scroll-hide] .scrollbar-horizontal-rail,
+.scrollbar[scroll-hide] .scrollbar-horizontal-bar {
+    opacity: 0;
+}
+
+/* 滑轨 */
+.scrollbar .scrollbar-vertical-rail,
+.scrollbar .scrollbar-horizontal-rail {
+    z-index: 100;
+    position: absolute;
+    border-radius: 4px;
+    background: #000;
+    opacity: 0.1;
+    transition: opacity 0.15s ease;
+}
+
+/* 垂直滑轨 */
+.scrollbar .scrollbar-vertical-rail {
+    width: 6px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* 水平滑轨 */
+.scrollbar .scrollbar-horizontal-rail {
+    height: 6px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* 滑块 */
+.scrollbar .scrollbar-vertical-bar,
+.scrollbar .scrollbar-horizontal-bar {
+    z-index: 101;
+    position: absolute;
+    border-radius: 4px;
+    background: #000;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+}
+
+/* 垂直滑块 */
+.scrollbar .scrollbar-vertical-bar {
+    width: 6px;
+}
+
+/* 水平滑块 */
+.scrollbar .scrollbar-horizontal-bar {
+    height: 6px;
+}
